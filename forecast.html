@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5日間の天気 | 天気予報アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="ロゴ" class="logo">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="郵便番号・地名を入力">
+                <button type="submit">検索</button>
+            </form>
+            <button id="back-to-current">現在地の天気予報に戻る</button>
+        </div>
+    </header>
+
+    <!-- 5日間の天気 -->
+    <main>
+        <section id="forecast-weather">
+            <h1>5日間の天気</h1>
+            <ul id="forecast-list">
+                <!-- JavaScriptでリストを生成 -->
+            </ul>
+        </section>
+
+        <!-- 切り替えボタン -->
+        <div class="switch-buttons">
+            <a href="index.html" class="button">今日の天気</a>
+            <a href="tomorrow.html" class="button">明日の天気</a>
+        </div>
+    </main>
+
+    <script src="forecast.js"></script>
+</body>
+</html>

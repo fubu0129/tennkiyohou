@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日の天気 | 天気予報アプリ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="ロゴ" class="logo">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="郵便番号・地名を入力">
+                <button type="submit">検索</button>
+            </form>
+            <button id="back-to-current" style="display: none;">現在地の天気予報に戻る</button>
+        </div>
+    </header>
+
+    <!-- 今日の天気 -->
+    <main>
+        <section id="today-weather">
+            <h1>今日の天気</h1>
+            <h3 id="location-name">現在地: 読み込み中...</h3>
+            <div class="weather-details">
+                <p>気温: <span id="temperature"></span>°C</p>
+                <p>湿度: <span id="humidity"></span>%</p>
+                <p>風速: <span id="wind-speed"></span>m/s</p>
+                <p>紫外線指数: <span id="uv-index"></span></p>
+                <p>天気アドバイス: <span id="weather-advice"></span></p>
+                <img id="weather-icon" src="img/clear.jpeg" alt="天気アイコン">
+            </div>
+        </section>
+
+        <!-- 切り替えボタン -->
+        <div class="switch-buttons">
+            <a href="tomorrow.html" class="button">明日の天気</a>
+            <a href="forecast.html" class="button">5日間の天気</a>
+        </div>
+
+        <!-- 雨雲レーダー -->
+        <section id="rain-radar">
+            <h2>雨雲レーダー</h2><br>
+            <p>(有料版のAPIを取得した場合、レーダーが表示されます）</p>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
